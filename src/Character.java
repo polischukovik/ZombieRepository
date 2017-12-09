@@ -1,10 +1,9 @@
-package src;
 
 import javafx.geometry.Point2D;
 
 import java.util.Objects;
 
-abstract class Character extends Movable{
+abstract class Character extends Movable {
 
 	public int  id;
 

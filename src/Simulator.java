@@ -1,6 +1,3 @@
-package src;
-
-
 public class Simulator {
     private int turns = 0;
 

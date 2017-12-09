@@ -1,11 +1,9 @@
-package src;
-
 import javafx.geometry.Point2D;
 
 import java.util.ArrayList;
 import java.util.Set;
 
-class Ash extends src.Human {
+class Ash extends Human {
 	int speed = 1000; 
 	int shootingRange = 2000;
 	
@@ -28,8 +26,8 @@ class Ash extends src.Human {
 		throw new IllegalArgumentException("Not applicable for Ash");
 	}
 	
-	public Point2D intercept(ArrayList<src.Zombie> targets){
-		src.Zombie target = targets.get(0);
+	public Point2D intercept(ArrayList<Zombie> targets){
+		Zombie target = targets.get(0);
 		System.err.println("Intercepting zombie " + target.id);
 		Point2D Pa = this.position;
 		// consider shotgun range when no next target
@@ -52,7 +50,7 @@ class Ash extends src.Human {
 		
 		Set<Double> timePair= null;
 		try{
-			timePair = src.Utils.getQuadraticRoots(a, b, c);
+			timePair = Utils.getQuadraticRoots(a, b, c);
 		}catch(IllegalArgumentException e){
 			System.err.println(e.getMessage());
 			throw new IllegalArgumentException("Imposible to reach target");
@@ -70,7 +68,8 @@ class Ash extends src.Human {
 			System.err.println("More zombies left - shifting to next target");
 
 			targets.stream().forEach(f -> System.err.println("\t"+f));
-			intersection = src.Character.move(intersection, src.Character.getDirection(intersection, targets.get(1).position), this.shootingRange-1500);
+			intersection = Character.move(intersection, Character.getDirection(intersection, targets.get(1).position)
+                    , this.shootingRange);
 		}
 		return intersection;
 	}

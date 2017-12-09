@@ -1,5 +1,3 @@
-package src;
-
 public class Constants {
     public final static int ZONE_HEIGTH = 16000;
     public final static int ZONE_WIDTH  = 9000;

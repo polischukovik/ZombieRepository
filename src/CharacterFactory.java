@@ -1,5 +1,3 @@
-package src;
-
 import javafx.geometry.Point2D;
 
 import java.util.HashMap;

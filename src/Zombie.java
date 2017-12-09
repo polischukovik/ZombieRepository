@@ -1,4 +1,3 @@
-package src;
 
 import javafx.geometry.Point2D;
 

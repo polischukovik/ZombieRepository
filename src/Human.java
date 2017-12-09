@@ -1,5 +1,3 @@
-package src;
-
 import javafx.geometry.Point2D;
 
 class Human extends Character {
